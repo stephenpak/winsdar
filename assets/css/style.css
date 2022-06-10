@@ -30,12 +30,6 @@ main {
 h1 {
   margin: 0;
   padding: 50px;
-  /*border: 20px;
-    border: 30px;
-    border-color: black;
-    border: 10px;*/
-
-  display: flex;
 }
 
 footer {
