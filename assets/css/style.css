@@ -1,38 +1,213 @@
+/* ========= Overall values of the site ========= */
+
 body {
-  background-color: lightslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(89, 92, 124);
 }
 
+form {
+    border: 3px solid #f1f1f1;
+    width: 100%;
+}
+
+/* ========= Start of A link Design=========*/
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color:white;
+}
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+    border-style: solid;     /* Adding solid line on the bottome of text */
+}
+
+a:active {
+    color: white;
+}
+
+/* ========= End of A Link Design========= */
+
+
+/* ========= End of the Overall layout ========= */
+
+
+
+
+
+/* ========= Start of Header Design========= */
 header {
-  background-color: lightslategray;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  /*border: 20px;
-    border: 30px;
-    border-color: black;
-    border: 10px;*/
+
+    padding: 20px 0px 20px 0px;
+    font-family: var(--font-family-one);
+    background-color: var(--dark-color);
+    color: var(--dark-color);
+
+    /*This is what's needed to have the text move.  Remember the following:
+    
+    display:flex causes the purple line
+    justify-content: space-between adds spacing on the contents
+    flex-wrap:wrap: if there is no space, it'll go to another line
+
+    */
+    
+    /*
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    */
+
 }
 
-main {
-  background-color: lightslategray;
-  margin: 0; /*to get rid of default spacing*/
-  border: 0; /*to get rid of default spacing*/
-  margin: 0;
-  border: 0;
-  padding: 10rem;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('/winsdar/assets/img/demonSlayer.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* ========= End of Header Design=========*/
+
+
+
+/* ========= Start of Positions on the Section Design=========*/
+
+.toppage, .image-grouping, .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    /*width: 100%;*/
+    padding: 5px;
+    /*flex-wrap: wrap;*/ /*Wihtout this, the search bar resizes on different sizes*/
 }
 
-h1 {
-  margin: 0;
-  padding: 50px;
+.logolink {
+    height: 55px;
 }
 
-footer {
-  background-color: lightslategray;
-  text-align: center;
+.toppage img {
+    background-color: orange;
+    /* Adjusting the image size to be equal on height and width */
+    max-width: 100%;
+    max-height: 100%;
 }
+
+.image-grouping {
+    justify-content: right;
+}
+
+/* ========= End of Positions on the Section Design=========*/
+
+
+
+.navbar {
+    background-color: rgb(63, 63, 153);
+}
+
+.signin {
+    margin: 5px;
+}
+
+.signin p{
+    font-size: 12px;
+    margin: 0px;
+}
+
+body h1 {
+
+    padding: 5px 5px 5px 35px;
+    /*We're taking out the inline display*/
+    /*display: var(--display-inline);*/
+    font-size: 48px;
+    background-color: teal;
+    height: 70px;
+
+}
+
+body nav {
+    background-color: var(--dark-color);
+    margin-right: 70px;
+    /*float: left;*/
+    font-family: var(--font-family-one);
+    font-size: 20px;
+    /*Note that there is no inline display*/
+}
+
+body nav ul {
+    list-style-type: none;
+    background-color: var(--dark-color);
+    padding: 10px;
+}
+
+body nav ul li {
+    background-color: var(--dark-color);
+    display: var(--display-inline);
+    margin-left: 10px;
+}
+
+/* We're in the header, going to nav, that's inside ul, in the li, and any text that has 'a' in it */
+body nav ul li a {
+    background-color: var(--dark-color);
+    padding: 0px 5px 0px 5px;                   /*Adding spacing around the text */
+    font-size: 25px;
+}
+
+/* ========= End of Body Design=========*/
+
+
+
+.imgcontainer {
+text-align: center;
+margin: 24px 0 12px 0;
+}
+
+img.avatar {
+width: 40%;
+border-radius: 50%;
+}
+
+.container {
+padding: 16px;
+border: 5px solid black;
+background-color: white;
+}
+
+span.psw {
+float: right;
+padding-top: 16px;
+}
+
+
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+span.psw {
+    display: block;
+    float: none;
+}
+.cancelbtn {
+    width: 100%;
+}
+}
+
+
+.background-products {
+    background-color: rgb(138, 124, 200);
+    margin: 10px;
+    padding: 20px;
+}
+
+.search-preferences {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.products-group {
+    flex: 1 0 100%;
+    display: flex;
+    /*If there's empty space, spread it*/
+    /*justify-content: space-between;*/
+    /*If the block reaches limit, scoot it down*/
+    flex-wrap: wrap;
+}
+

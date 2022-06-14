@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Language of the ASCII -->
+        <meta charset="UTF-8" />
+
+        <!-- Using style sheet.  Overall style -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <!-- This is for the design on the registration -->
+        <link rel="stylesheet" href="../assets/css/form.css">
+
+        <link rel="stylesheet" href="../assets/css/checkout.css">
+
+        <!-- Apple created a meta element to address mobile screen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    </head>
+
+    <body>
+
+        <!-- Logo of the webpage -->
+        <div class = "logotwo">
+            <img src="../images/logo.jpg" alt="Logo">
+        </div>
+
+        <form action="/action_page.php" method="post">
+
+        <div class="container">
+
+            <h2>Register</h2>
+
+            <label for="firstname"><b>First Name: </b></label>
+            <input type="text" placeholder="First Name" name="firstname" required>
+
+            <label for="lastname"><b>Last Name: </b></label>
+            <input type="text" placeholder="First Name" name="lastname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw"><b>Re-Enter Password</b></label>
+            <input type="password" placeholder="Re-Enter Password" name="psw" required>
+                
+            <button type="submit">Login</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+        <!--
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+        -->
+        </form>
+
+        <p>Copyright | About Us | Contact Us</p>
+
+    </body>
+</html>
