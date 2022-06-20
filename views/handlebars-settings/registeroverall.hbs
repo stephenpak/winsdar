@@ -1,0 +1,50 @@
+    <body>
+
+        <!-- Logo of the webpage -->
+        <div class = "logotwo">
+            <a href="/main"><img src="../images/logo.jpg" alt="Logo"></a>
+        </div>
+
+        {{#if message}}
+            <div class="alert {{messageClass}}" role="alert">
+                {{message}}
+            </div>
+        {{/if}}
+
+        <form action="/registertest" method="POST">
+
+            <div class="container">
+
+                <h2>Register</h2>
+
+                <label for="firstname"><b>First Name: </b></label>
+                <input type="text" placeholder="First Name" name="firstname" required>
+
+                <label for="lastname"><b>Last Name: </b></label>
+                <input type="text" placeholder="First Name" name="lastname" required>
+
+                <label for="emailInput">Email address</label>
+                <input name="email" type="email" class="form-control" id="emailInput" placeholder="Enter email">
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw"><b>Re-Enter Password</b></label>
+                <input type="password" placeholder="Re-Enter Password" name="psw" required>
+                    
+                <button type="submit">Submit</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <!--
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+            -->
+        </form>
+
+        <p>Copyright | About Us | Contact Us</p>
+
+    </body>

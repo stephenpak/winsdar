@@ -1,0 +1,207 @@
+        <!-- Header is fine -->
+        <header>
+            <div class="toppage">
+                <div class="logolink">
+                    <a href="/main"><img src="../images/logo.jpg" alt="Logo"></a>
+                </div>
+
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <!-- Search Bar Properties -->
+                        <div class="topnav">
+                            <input type="text" placeholder="Search..">
+                        </div>
+    
+                    </form>    
+                    <img src="../images/search.png" height="50">
+
+                </div>
+    
+                <div class="signin">
+                    <p>Hello!</p> 
+                    <p><a href="/signin">Sign In</a> or <a href="/registertest">Register Here!</a></p>
+                </div>
+
+                <!-- Logo of the Cart -->
+                <a href="/checkout"><img src="../images/cart.jpg" alt="cart" height="50"></a>
+    
+            </div>
+    
+            <!-- Start of the Navigation Bar -->
+            <div class="navbar">
+                <nav>
+                    <!-- Making an unordered list for the top section -->
+                        <ul>
+                        <!--Four Words on the top: "About Me" "Work" "Contact Me" "Resume" -->
+                    
+                        <!-- About Me Section -->
+                            <li>
+                                <a href = "#about-me">New Arrivals</a>
+                            </li>
+                            <!-- Work Section -->
+                            <li>
+                                <a href = "#work-section">Cosplays</a>
+                            </li>
+                            <!-- Contact Us Section -->
+                            <li>
+                                <a href = "#contact-me-section">Weapons</a>
+                            </li>
+                            <!-- Resume Section -->
+                            <li>
+                                <a href = "./assets/files/Edgardo Lopez Resume Software PDF File.pdf">Title of Anime</a>
+                            </li>
+                        </ul>
+                </nav>    
+            </div>
+        </header>
+        <!-- Header is fine for now. -->
+
+    
+    </head>
+
+    <!-- Navigator Bar -->
+
+    <!-- Main Portion -->
+    <body>
+
+
+
+        <!-- Start of the Product Page Menu -->
+
+        <!-- The first one is for the bacground for the products to be put in -->
+        <div class="background-products">
+            <!-- This is taken out in the Checkout -->
+
+            <!--
+            <div class="search-preferences">
+                <p>Possible Sort (Prices, Name, Etc)</p>
+                <p>Search Amount</p>
+            </div>
+            -->
+
+            <div class="products-box">
+                <!-- We have two windows:  Products that are being sold and the Checkout -->
+                <!-- Have the handlebars take care of this section -->
+                <div class = "checkout-box-length">
+
+                    <!-- Top Row Text -->
+                    <div class="checkout-section-info">
+                        <h2>Shopping Cart</h2>
+                        <p>Price</p>    
+                    </div>
+
+
+                    <!-- <div> -->
+                        <!-- Products that are being sold -->
+                        <div class="shopping-section-products">
+        
+    
+                            <!-- Insert first files here -->
+                            <!--\assets\images\dummy-pictures-->
+                            <!-- All of it, including images, description, here -->
+
+
+                            <!-- PUT THE DATABASE INFORMATION FOR THE PRODUCT HERE!!! -->
+                            {{#each posts}}
+                            <div class="product-section">
+
+                                <div class="product-details">
+                                    <div class="photosize">
+                
+                                        <img src = "../images/swordsample.jpg" alt="Sword Sample" class="photochecktout">
+                                            <!-- I'm making an attempt to color the overall picture here -->
+                    
+                    
+                                        
+                    
+                                    </div>
+        
+                                    <div class="text-box">
+                                        <h3>
+                                           {{this.item}} from {{this.name}}
+                                        </h3>
+                                        <br/>
+                                        <p>
+                                            {{this.description}}
+                                        </p>
+                                        <br/>
+                                    </div>
+                                    
+        
+                                </div>
+    
+                                <!-- Price Section Right Indent -->
+                                <div>
+                                    <p>{{this.price}}</p>
+                                </div>
+    
+                            </div>
+                            {{/each}}
+
+        
+                            
+                        </div>
+                    
+    
+                    <!-- </div> -->
+
+                    <div class="subtotal-section">
+                        <!-- Have the total price add up here as well as a message saying the subtotal with the number of products.  Use the ${} funcation -->
+                        <div>
+                            <h3>
+                                Total Cost:
+                            </h3>
+                        </div>
+                        <div>
+                            <p>Price</p>
+                        </div>
+
+                    </div>
+    
+    
+        
+                </div>    
+
+
+                <!-- Checkout Button Window -->
+                <div class="checkout-window">
+                    <p class="align-left">Checkout Section</p>
+                    <p>Price</p>
+                    
+                    <button type="checkout">Checkout</button>
+                    
+                </div>
+
+    
+            </div>
+
+
+
+        </div>
+
+        <div class="bottom-section">
+            <div>
+                <p>Copyright | About Us | Contact Us</p>
+            </div>
+    
+            <div class="image-grouping">
+                <img src="../images/paypal.png" alt="PayPal" height="50">
+                <img src="../images/american-express.png" alt="American Express" height="50">
+                <img src="../images/visa.png" alt="Visa" height="50">
+            </div>    
+        </div>
+
+
+
+        <!--
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+        -->
+
+
+
+
+
+    </body>

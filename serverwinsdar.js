@@ -7,20 +7,24 @@ const exphbs = require('express-handlebars');
 const app = express();
 app.set('view engine', 'hbs');
 
+//We're using the handlebars in the Layouts path and it is in shoppingtemplate
 app.engine('hbs', exphbs.engine({
     defaultLayout: 'shoppingtemplate',
     extname: '.hbs'
 }));
 
+//View the engine here
 app.set('view engine', 'hbs');
 
+//On the dirname, find the public folder to add the styles and the images
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+//Render dummy cause the home is just the example that uses nothing
 app.get('/', (req, res) => {
     res.render('home');
 });
 
+//The actual direct path that has the mainpageproduct handlebars
 app.get('/main', (req, res) => {
     res.render('mainpageproduct');
 });

@@ -1,0 +1,240 @@
+        <!-- Header is fine -->
+        <header>
+            <div class="toppage">
+                <div class="logolink">
+                    <!-- This works with the link.  Surround the image with an a bracket and target the image -->
+                    <a href="../checkout-page/checkout.html"><img src="../images/logo.jpg" alt="Logo"></a>
+                </div>
+
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <!-- Search Bar Properties -->
+                        <div class="topnav">
+                            <input type="text" placeholder="Search..">
+                        </div>
+    
+                    </form>    
+                    <img src="../images/search.png" height="50">
+
+                </div>
+
+                <div class="signin">
+                    <p>Hello!</p> 
+                    <p>Sign In or Register Here!</p>
+                </div>
+
+                <!-- Logo of the Cart -->
+                <img src="../images/cart.jpg" alt="cart" height="50"></img>
+    
+            </div>
+    
+            <!-- Start of the Navigation Bar -->
+            <div class="navbar">
+                <nav>
+                    <!-- Making an unordered list for the top section -->
+                        <ul>
+                        <!--Four Words on the top: "About Me" "Work" "Contact Me" "Resume" -->
+                    
+                        <!-- About Me Section -->
+                            <li>
+                                <a href = "#about-me">New Arrivals</a>
+                            </li>
+                            <!-- Work Section -->
+                            <li>
+                                <a href = "#work-section">Cosplays</a>
+                            </li>
+                            <!-- Contact Us Section -->
+                            <li>
+                                <a href = "#contact-me-section">Weapons</a>
+                            </li>
+                            <!-- Resume Section -->
+                            <li>
+                                <a href = "./assets/files/Edgardo Lopez Resume Software PDF File.pdf">Title of Anime</a>
+                            </li>
+                        </ul>
+                </nav>    
+            </div>
+        </header>
+        <!-- Header is fine for now. -->
+
+    
+    </head>
+
+    <!-- Navigator Bar -->
+
+    <!-- Main Portion -->
+    <body>
+
+
+
+        <!-- Start of the Product Page Menu -->
+
+        <!-- The first one is for the bacground for the products to be put in -->
+        <div class="background-products">
+            <div class="search-preferences">
+                <p>Possible Sort (Prices, Name, Etc)</p>
+                <p>Search Amount</p>
+            </div>
+
+            <div class="products-group">
+
+                <!-- I'm going to make a test here for the post.  I have price set to $15.99 -->
+                <div class="work-card">
+                    <!-- Initiate the call for the DB -->
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
+    
+                        <img src = "../images/swordsample.jpg" alt="Sword Sample" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
+    
+    
+                        
+    
+                    </div>
+                    <div class="text-box">
+                        <h3>
+                           Title of the Product will be here
+                        </h3>
+                        <br/>
+                        <p>
+                            This is going to be a summary of the product if we choose to have it display here.
+                        </p>
+                        <br/>
+                        <p>
+                            <!-- PUT THE PRICE DB HERE!!! -->
+                            {{posts.price}}
+                        </p>
+                    </div>
+                    
+                </div>
+
+
+                <div class="work-card">
+    
+
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
+    
+                        <img src = "../images/swordsample.jpg" alt="Sword Sample" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
+    
+    
+                        
+    
+                    </div>
+                    <div class="text-box">
+                        <h3>
+                           Title of the Product will be here
+                        </h3>
+                        <br/>
+                        <p>
+                            This is going to be a summary of the product if we choose to have it display here.
+                        </p>
+                        <br/>
+                        <p>
+                            Price: $5.00
+                        </p>
+                    </div>
+
+                    
+                </div>
+
+                <div class="work-card">
+    
+
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
+    
+                        <img src = "../images/swordsample.jpg" alt="Sword Sample" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
+    
+    
+                        
+    
+                    </div>
+                    <div class="text-box">
+                        <h3>
+                           Title of the Product will be here
+                        </h3>
+                        <br/>
+                        <p>
+                            This is going to be a summary of the product if we choose to have it display here.
+                        </p>
+                        <br/>
+                        <p>
+                            Price: $5.00
+                        </p>
+                    </div>
+
+                    
+                </div>
+                
+                <div class="work-card">
+    
+
+                    <!-- Insert first files here -->
+                    <!--\assets\images\dummy-pictures-->
+                    <div class="photo">
+    
+                        <img src = "../images/swordsample.jpg" alt="Sword Sample" class="resizephoto">
+                            <!-- I'm making an attempt to color the overall picture here -->
+    
+    
+                        
+    
+                    </div>
+                    <div class="text-box">
+                        <h3>
+                           Title of the Product will be here
+                        </h3>
+                        <br/>
+                        <p>
+                            This is going to be a summary of the product if we choose to have it display here.
+                        </p>
+                        <br/>
+                        <p>
+                            Price: $5.00
+                        </p>
+                    </div>
+
+                    
+                </div>
+
+
+    
+    
+            </div>
+
+
+
+        </div>
+
+        <div class="bottom-section">
+            <div>
+                <p>Copyright | About Us | Contact Us</p>
+            </div>
+    
+            <div class="image-grouping">
+                <img src="../images/paypal.png" alt="PayPal" height="50">
+                <img src="../images/american-express.png" alt="American Express" height="50">
+                <img src="../images/visa.png" alt="Visa" height="50">
+            </div>    
+        </div>
+
+
+
+        <!--
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+        -->
+
+
+
+
+
+    </body>
