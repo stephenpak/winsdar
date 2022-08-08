@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS winsdar;
+CREATE DATABASE winsdar;
+USE winsdar; 
